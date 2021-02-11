@@ -9,7 +9,7 @@ Before the hands-on lab setup guide
 </div>
 
 <div class="MCWHeader3">
-November 2020
+February 2021
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -147,21 +147,19 @@ The notebooks you will run depends on certain Python libraries that will need to
 
 ### Task 4: Upload the Databricks notebook archive
 
-1. Within the Azure Databricks Workspace, using the command bar on the left, select **Workspace**, **Users** and select your username (the entry with house icon).
+1. Select the link below to download the `Databricks notebook archive` file to your local computer:
 
-2. In the blade that appears, select the downwards pointing chevron next to your name, and select **Import**.
+   [AI with Databricks and AML.dbc](https://github.com/microsoft/MCW-Machine-Learning/blob/master/Hands-on%20lab/notebooks/AI%20with%20Databricks%20and%20AML.dbc?raw=true)
+
+2. Within the Azure Databricks Workspace, using the command bar on the left, select **Workspace**, **Users** and select your username (the entry with house icon).
+
+3. In the blade that appears, select the downwards pointing chevron next to your name, and select **Import**.
 
     ![The Import menu item can be accessed by selecting your username from the list of users in the workspace.](images/azure-databricks-import-menu.png "Import Menu")
 
-3. On the Import Notebooks dialog, select URL and paste in the following URL:
+4. On the Import Notebooks dialog, browse and open the `AI with Databricks and AML.dbc` file from your local computer and then select **Import**.
 
-    `https://github.com/microsoft/MCW-Machine-Learning/blob/master/Hands-on%20lab/notebooks/AI%20with%20Databricks%20and%20AML.dbc?raw=true`
-
-4. Select **Import**.
-
-    > **Note**: If you are facing difficulty with this URL, you can also consider cloning this repository locally, and uploading the file from your computer to databricks. To do this, download the zip archive of this repository, and extract it to a known location. Then, from the repository root, navigate to `Hands-on lab/notebooks/AI with Databricks and AML.dbc`.
-    > 
-    > ![Obtaining a zip archive of the repository to access the notebook for upload into the Databricks workspace.](images/download-zip-repository.png "Obtaining a local copy of the repository")
+    ![Obtaining a zip archive of the repository to access the notebook for upload into the Databricks workspace.](images/download-zip-repository-2.png "Obtaining a local copy of the repository")
 
 5. A folder named after the archive should appear. Select that folder.
 
@@ -179,19 +177,15 @@ The notebooks you will run depends on certain Python libraries that will need to
 
 3. In the Create Machine Learning Workspace dialog that appears, provide the following values:
 
-    - **Workspace Name**: `mcwmachinelearning`
-
     - **Subscription**: Choose your Azure subscription.
 
     - **Resource group**: Select the resource group in which you deployed your Azure Databricks workspace.
 
+    - **Workspace Name**: `mcwmachinelearning`
+
     - **Location**: Choose a region closest to you (it is OK if the Azure Databricks Workspace and the Azure Machine Learning Workspace are in different locations).
 
-    - **Workspace edition**: Select `Enterprise`.
-
     ![The Machine Learning Create form is populated with the values outlined above. The Review + Create button is highlighted at the bottom of the form.](images/create-aml-workspace.png 'Azure Machine Learning Workspace Creation Dialog')
-
-    > **Note**: The option to set the **Workspace edition** may not be present. 
 
 4. Select **Review + Create** and then select **Create** when the form values passes validation.
 
