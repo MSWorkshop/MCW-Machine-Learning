@@ -9,7 +9,7 @@ Hands-on lab step-by-step
 </div>
 
 <div class="MCWHeader3">
-November 2020
+February 2021
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -18,7 +18,7 @@ Microsoft may have patents, patent applications, trademarks, copyrights, or othe
 
 The names of manufacturers, products, or URLs are provided for informational purposes only and Microsoft makes no representations and warranties, either expressed, implied, or statutory, regarding these manufacturers or the use of the products with any Microsoft technologies. The inclusion of a manufacturer or product does not imply endorsement of Microsoft of the manufacturer or product. Links may be provided to third party sites. Such sites are not under the control of Microsoft and Microsoft is not responsible for the contents of any linked site or any link contained in a linked site, or any changes or updates to such sites. Microsoft is not responsible for webcasting or any other form of transmission received from any linked site. Microsoft is providing these links to you only as a convenience, and the inclusion of any link does not imply endorsement of Microsoft of the site or the products contained therein.
 
-© 2020 Microsoft Corporation. All rights reserved.
+© 2021 Microsoft Corporation. All rights reserved.
 
 Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx> are trademarks of the Microsoft group of companies. All other trademarks are property of their respective owners.
 
@@ -140,11 +140,15 @@ In this exercise, you will create a model that predicts battery failure from tim
 
     ![The Configure run screen shows the option to review the selected dataset structure. Select the view dataset link next to the dataset name.](images/automl-create-dataset-02.png 'Confirm and create the dataset')
 
-6.  Provide the experiment name: `Battery-Cycles-Forecast` and select **Daily_Cycles_Used** as target column. Select **Create a new compute**.
+6. In the `Dataset preview` dialog select **Close** and return to the `Configure run` dialog.
+
+    ![Dataset preview dialog showing the preview of the training dataset.](images/automl-data-preview.png 'Dataset preview dialog')
+
+7. Provide the experiment name: `Battery-Cycles-Forecast` and select **Daily_Cycles_Used** as target column. Select **Create a new compute**.
 
     ![In the Configure run form is populated with the above values. The Create a new compute button is highlighted.](images/automl-create-experiment.png 'Create New Experiment details')
 
-7. For the new compute, provide the following values and then select **Next**:
+8. For the new compute, provide the following values and then select **Next**:
 
     - **Virtual machine priority**: `Dedicated`
 
@@ -154,7 +158,7 @@ In this exercise, you will create a model that predicts battery failure from tim
 
     ![The Create compute cluster form is populated with the above values. The Next button is selected at the bottom of the form.](images/create-compute-1.png "Setting preliminary information for a new compute cluster")
 
-8. On the next page, provide the following parameters for your compute cluster. Then, select **Create**.
+9. On the next page, provide the following parameters for your compute cluster. Then, select **Create**.
 
     - **Compute name**: `auto-ml-compute`
 
@@ -168,7 +172,7 @@ In this exercise, you will create a model that predicts battery failure from tim
 
     > **Note**: The creation of the new compute may take several minutes. Once the process is completed, select **Next** in the `Configure run` section.
 
-9.  Select the `Time series forecasting` task type and provide the following values and then select **View additional configuration settings**:
+10.  Select the `Time series forecasting` task type and provide the following values and then select **View additional configuration settings**:
 
     - **Time column**: `Date`
 
@@ -178,7 +182,7 @@ In this exercise, you will create a model that predicts battery failure from tim
 
     ![The Select task type form is populated with the values outlined above. The View additional configuration settings link is highlighted.](images/automl-configure-task-01.png 'Configure time series forecasting task')
 
-10. For the automated machine learning run additional configurations, provide the following values and then select **Save**:
+11. For the automated machine learning run additional configurations, provide the following values and then select **Save**:
 
     - **Primary metric**: `Normalized root mean squared error`
 
@@ -192,7 +196,7 @@ In this exercise, you will create a model that predicts battery failure from tim
 
     > **Note**: We are setting a metric score threshold to limit the training time. In practice, for initial experiments, you will typically only set the training job time to allow AutoML to discover the best algorithm to use for your specific data.
 
-11. Select **Finish** to start the new automated machine learning run.
+12. Select **Finish** to start the new automated machine learning run.
 
     > **Note**: The experiment should run for up to 10 minutes. If the run time exceeds 15 minutes, cancel the run and start a new one (steps 3, 9, 10). Make sure you provide a higher value for `Metric score threshold` in step 10.
 
